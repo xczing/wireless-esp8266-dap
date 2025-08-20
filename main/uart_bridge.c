@@ -64,14 +64,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 #elif defined CONFIG_IDF_TARGET_ESP32C3
     #define UART_BRIDGE_TX UART_NUM_1
     #define UART_BRIDGE_RX UART_NUM_1
-    #define UART_BRIDGE_TX_PIN 19
-    #define UART_BRIDGE_RX_PIN 18 // PIN18 has 50000ns glitch during the power-up
+#define UART_BRIDGE_TX_PIN 21
+#define UART_BRIDGE_RX_PIN 20 // PIN18 has 50000ns glitch during the power-up
 #else
     #error unknown hardware
 #endif
 
-#define EVENTS_QUEUE_SIZE 10
-#define UART_BUF_SIZE     512
+#define EVENTS_QUEUE_SIZE 20
+#define UART_BUF_SIZE 1024
 
 #ifdef CALLBACK_DEBUG
 #define debug(s, ...) os_printf("%s: " s "\n", "Cb:", ##__VA_ARGS__)
