@@ -378,7 +378,7 @@ __STATIC_INLINE uint8_t DAP_GetProductFirmwareVersionString (char *str) {
 #define PIN_nTRST 5 // optional
 #define PIN_nRESET 10
 
-#define PIN_LED_CONNECTED 8 // won't be used
+#define PIN_LED_CONNECTED _ // won't be used
 #define PIN_LED_RUNNING 8   // won't be used
 #elif defined CONFIG_IDF_TARGET_ESP32S3
   #define PIN_SWDIO _      // SPI MISO
