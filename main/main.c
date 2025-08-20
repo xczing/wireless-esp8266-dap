@@ -139,7 +139,7 @@ void app_main() {
 #if defined CONFIG_IDF_TARGET_ESP8266
     #define UART_BRIDGE_TASK_STACK_SIZE 1024
 #else
-    #define UART_BRIDGE_TASK_STACK_SIZE 2048
+#define UART_BRIDGE_TASK_STACK_SIZE 4096
 #endif
 
     //// FIXME: potential stack overflow
